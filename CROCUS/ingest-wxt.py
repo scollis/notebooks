@@ -13,7 +13,7 @@ import argparse
 
 from matplotlib.dates import DateFormatter
 
-def ingest_wxt(st, global_attrs, var_attrs):
+def ingest_wxt(st, global_attrs, var_attrs, odir='/Users/scollis/data/wxt/' ):
     hours = 24
     start = st.strftime('%Y-%m-%dT%H:%M:%SZ')
     end = (st + datetime.timedelta(hours=hours)).strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -91,7 +91,7 @@ def ingest_wxt(st, global_attrs, var_attrs):
     _ = vals10.pop('value')
     
     end_fname = st.strftime('_%Y%m%d_%H%M%SZ.nc')
-    start_fname = '/Users/scollis/data/wxt/CMS_wxt536_' + global_attrs['site_ID'] + '_' + global_attrs['datalevel']
+    start_fname = odir + '/CMS_wxt536_' + global_attrs['site_ID'] + '_' + global_attrs['datalevel']
     fname = start_fname + end_fname
     
     try:
@@ -140,6 +140,10 @@ if __name__ == '__main__':
                       'latitude' : 41.71991216,
                       'longitude' : -87.612834722}
     
+    global_sites = {'NU' : wxt_global_NU, 
+                    'CSU': wxt_global_CSU,
+                    'NEIU' : wxt_global_NEIU}
+    
     var_attrs_wxt = {'temperature': {'standard_name' : 'air_temperature',
                            'units' : 'celsius'},
                     'humidity': {'standard_name' : 'relative_humidity',
@@ -160,26 +164,33 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Optional app description')
     
     parser.add_argument('ndays', type=int,
-                    help='A required integer positional argument')
+                    help='number of days to ingest')
     
     parser.add_argument('y', type=int,
-                    help='A required integer positional argument')
+                    help='Year start')
     
     parser.add_argument('m', type=int,
-                    help='A required integer positional argument')
+                    help='Month start')
     
     parser.add_argument('d', type=int,
-                    help='A required integer positional argument')
+                    help='day start')
     
+    parser.add_argument('site', type=str,
+                    help='CROCUS Site')
+
+    parser.add_argument('odir', type=str,
+                    help='Out directory (must exist)')
 
     args = parser.parse_args()
     print(args.ndays)
     start_date = datetime.datetime(args.y,args.m,args.d)
+    site_args = global_sites[args.site]
+    
     for i in range(args.ndays):
         this_date = start_date + datetime.timedelta(days=i)
         print(this_date)
         try:
-            ingest_wxt(this_date,  wxt_global_NU, var_attrs_wxt)
+            ingest_wxt(this_date,  site_args, var_attrs_wxt, odir=args.odir)
             print("Succeed")
         except:
             print("Fail")
