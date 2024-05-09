@@ -1,3 +1,12 @@
+"""Ingests a number of days of CROCUS WXT data
+
+Usage:
+    python ./ingest-wxt.py ndays year month day site out_directory
+
+Author:
+    Scott Collis - 5.9.2024
+"""
+
 import sage_data_client
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -14,6 +23,30 @@ import argparse
 from matplotlib.dates import DateFormatter
 
 def ingest_wxt(st, global_attrs, var_attrs, odir='/Users/scollis/data/wxt/' ):
+    """
+        Ingest from CROCUS WXTs using the Sage Data Client. 
+
+        Ingests a whole day of WXT data and saves it as a NetCDF to odir
+    
+        Parameters
+        ----------
+        st : Datetime 
+            Date to ingest
+
+        global_attrs : dict
+            Attributes that are specific to the site.
+        
+        var_attrs : dict
+            Attributes that map variables in Beehive to
+            CF complaint netCDF valiables.
+        
+    
+        Returns
+        -------
+        None
+    
+    """
+    
     hours = 24
     start = st.strftime('%Y-%m-%dT%H:%M:%SZ')
     end = (st + datetime.timedelta(hours=hours)).strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -110,6 +143,9 @@ def ingest_wxt(st, global_attrs, var_attrs, odir='/Users/scollis/data/wxt/' ):
     vals10xr.to_netcdf(fname)
 
 if __name__ == '__main__':
+    
+    # Site attributes
+    
     wxt_global_NEIU = {'conventions': "CF 1.10",
                        'site_ID' : "NEIU",
                       'CAMS_tag' : "CMS-WXT-002",
@@ -140,9 +176,14 @@ if __name__ == '__main__':
                       'latitude' : 41.71991216,
                       'longitude' : -87.612834722}
     
+    #put these in a dictionary for accessing
+    
     global_sites = {'NU' : wxt_global_NU, 
                     'CSU': wxt_global_CSU,
                     'NEIU' : wxt_global_NEIU}
+    
+    
+    #Variable attributes
     
     var_attrs_wxt = {'temperature': {'standard_name' : 'air_temperature',
                            'units' : 'celsius'},
@@ -161,6 +202,9 @@ if __name__ == '__main__':
                     'rainfall': {'standard_name' : 'precipitation_amount',
                            'units' : 'kg m-2'}}
 
+    
+    #Parsing the command line
+    
     parser = argparse.ArgumentParser(description='Optional app description')
     
     parser.add_argument('ndays', type=int,
