@@ -18,11 +18,12 @@ import datetime
 import xarray as xr
 import os
 import argparse
+from time import sleep
 
 
 from matplotlib.dates import DateFormatter
 
-def ingest_wxt(st, global_attrs, var_attrs, odir='/Users/scollis/data/wxt/' ):
+def ingest_wxt(st, global_attrs, var_attrs, odir='/Users/scollis/data/wxt/', pause_between = 5 ):
     """
         Ingest from CROCUS WXTs using the Sage Data Client. 
 
@@ -47,29 +48,46 @@ def ingest_wxt(st, global_attrs, var_attrs, odir='/Users/scollis/data/wxt/' ):
     
     """
     
-    hours = 24
-    start = st.strftime('%Y-%m-%dT%H:%M:%SZ')
-    end = (st + datetime.timedelta(hours=hours)).strftime('%Y-%m-%dT%H:%M:%SZ')
-    print(start)
-    print(end)
-    df_temp = sage_data_client.query(start=start,
-                                     end=end, 
-                                        filter={
-                                            "name" : 'wxt.env.temp|wxt.env.humidity|wxt.env.pressure|wxt.rain.accumulation',
-                                            "plugin" : global_attrs['plugin'],
-                                            "vsn" : global_attrs['WSN'],
-                                            "sensor" : "vaisala-wxt536"
-                                        }
-    )
-    winds = sage_data_client.query(start=start,
-                                     end=end, 
-                                        filter={
-                                            "name" : 'wxt.wind.speed|wxt.wind.direction',
-                                            "plugin" : global_attrs['plugin'],
-                                            "vsn" : global_attrs['WSN'],
-                                            "sensor" : "vaisala-wxt536"
-                                        }
-    )
+    #We break up the reading hour by hour so Beehive does not have a cow
+    
+    t_frames = []
+    w_frames = []
+    for hours in range(24):
+        print('Reading WXT data for the hours (to, from)')
+        start = (st + datetime.timedelta(hours=hours)).strftime('%Y-%m-%dT%H:%M:%SZ')
+        end = (st + datetime.timedelta(hours=hours+1)).strftime('%Y-%m-%dT%H:%M:%SZ')
+        print(start)
+        print(end)
+        print('Getting Met')
+        temps_name = 'wxt.env.temp|wxt.env.humidity|wxt.env.pressure|wxt.rain.accumulation'
+        partial_df_temp = sage_data_client.query(start=start,
+                                         end=end, 
+                                            filter={
+                                                "name" : temps_name,
+                                                "plugin" : global_attrs['plugin'],
+                                                "vsn" : global_attrs['WSN'],
+                                                "sensor" : "vaisala-wxt536"
+                                            }
+        )
+        t_frames.append(partial_df_temp)
+
+        print('Getting winds')
+        partial_winds = sage_data_client.query(start=start,
+                                               end=end, 
+                                               filter={
+                                               "name" : 'wxt.wind.speed|wxt.wind.direction',
+                                               "plugin" : global_attrs['plugin'],
+                                               "vsn" : global_attrs['WSN'],
+                                               "sensor" : "vaisala-wxt536"
+                                               })
+        w_frames.append(partial_winds)
+
+    
+    df_temp = pd.concat(t_frames)
+    winds = pd.concat(w_frames)
+    print('Reading done')
+    
+   
     
     hums = df_temp[df_temp['name']=='wxt.env.humidity']
     temps = df_temp[df_temp['name']=='wxt.env.temp']
@@ -236,6 +254,9 @@ if __name__ == '__main__':
         try:
             ingest_wxt(this_date,  site_args, var_attrs_wxt, odir=args.odir)
             print("Succeed")
-        except:
-            print("Fail")
+        except Exception as e:
+            print(e)
+        
+        sleep(5)
+        
     
