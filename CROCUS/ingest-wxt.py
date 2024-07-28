@@ -20,6 +20,8 @@ import os
 import argparse
 from time import sleep
 
+import sage_data_client
+
 
 from matplotlib.dates import DateFormatter
 
@@ -163,7 +165,26 @@ def ingest_wxt(st, global_attrs, var_attrs, odir='/Users/scollis/data/wxt/', pau
 if __name__ == '__main__':
     
     # Site attributes
-    
+    wxt_global_ATMOS = {'conventions': "CF 1.10",
+                      'WSN':'W0A4',
+                       'site_ID' : "ATMOS",
+                      'CAMS_tag' : "CMS-WXT-001",
+                      'datastream' : "CMS_wxt536_ATMOS_a1",
+                      'plugin' : "registry.sagecontinuum.org/jrobrien/waggle-wxt536:0.*",
+                      'datalevel' : "a1",
+                      'latitude' : 41.7016264,
+                      'longitude' : -87.9956515}
+   
+    wxt_global_ADMIOP2 = {'conventions': "CF 1.10",
+                      'WSN':'W09E',
+                       'site_ID' : "ADMIOP2",
+                      'CAMS_tag' : "CMS-WXT-00X",
+                      'datastream' : "CMS_wxt536_ADMIOP2_a1",
+                      'plugin' : "10.31.81.1:5000/local/waggle-wxt536.*",
+                      'datalevel' : "a1",
+                      'latitude' : 41.867614285,
+                      'longitude' : -87.649490603}
+
     wxt_global_NEIU = {'conventions': "CF 1.10",
                        'site_ID' : "NEIU",
                       'CAMS_tag' : "CMS-WXT-002",
@@ -194,11 +215,25 @@ if __name__ == '__main__':
                       'latitude' : 41.71991216,
                       'longitude' : -87.612834722}
     
+    wxt_global_UIC = {'conventions': "CF 1.10",
+                  'WSN':'W096',
+                   'site_ID' : "UIC",
+                  'CAMS_tag' : "CMS-WXT-011",
+                  'datastream' : "CMS_wxt536_UIC_a1",
+                  'plugin' : "10.31.81.1:5000/local/waggle-wxt536.*",
+                  'datalevel' : "a1",
+                  'latitude' : 41.869407936,
+                  'longitude' : -87.645806251}
+
+    
     #put these in a dictionary for accessing
     
     global_sites = {'NU' : wxt_global_NU, 
                     'CSU': wxt_global_CSU,
-                    'NEIU' : wxt_global_NEIU}
+                    'NEIU' : wxt_global_NEIU,
+                    'UIC' : wxt_global_UIC,
+                    'ATMOS' : wxt_global_ATMOS,
+                    'ADMIOP2' : wxt_global_ADMIOP2}
     
     
     #Variable attributes
