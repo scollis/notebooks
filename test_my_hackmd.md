@@ -33,7 +33,10 @@ Draft deployment memo :active, dm1, 2024-09-23, 1w
 
 Deployment memo review :dmr1, after dm1, 2w
 
-  
+Radar ops plan : radar_operations, after dmr1, 5w
+Sounding ops plan : sounding_operations, after dmr1, 5w
+Ground sampling plans : ground_plans, after dmr1, 5w
+Combined operations plans: operations_plan, after ground_plans, 5w
 
 section Radar Deployment
 
@@ -55,7 +58,9 @@ Select site for SPARC : cfconfirm, after cfsite, 2w
 
 SPARC power install :crit, sparcinstall, after cfconfirm, until sparcpower
 
-  
+section Sounding Array
+Identify sounding location : soundsite, after cfconfirm, 5w
+
 
 section Micronet
 
@@ -110,6 +115,8 @@ Woodlawn Micronet Node installed :milestone, wlinst, 2024-11-01, 0d
 Initial list of radar sites :milestone, radar3, after radar2, 0d
 
 Communications plan released :milestone, comsplan, 2025-03-01, 0d
+
+Brief Argonne Site Office :milestone, ASO_briefing, 2025-03-10, 0d
 
 Power installed for SPARC :milestone, sparcpower, 2025-03-07, 0d
 
