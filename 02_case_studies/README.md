@@ -2,7 +2,7 @@
 
 Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI.
 
-**25 notebooks** &nbsp;·&nbsp; 6 featured, 16 solid, 3 work-in-progress
+**26 notebooks** &nbsp;·&nbsp; 6 featured, 17 solid, 3 work-in-progress
 
 [← Back to collection index](../README.md)
 
@@ -34,6 +34,7 @@ Analyses tied to a specific storm, event, location, or field campaign — hurric
 | [KAMX roost rings.ipynb](KAMX%20roost%20rings.ipynb) | KAMX radar roost-ring case study with reflectivity and velocity visualization | solid | 2014 |
 | [KDVN_meshgrid.ipynb](KDVN_meshgrid.ipynb) | NEXRAD reflectivity case study for KDVN radar with map projections | solid | 2025 |
 | [KLOT_area_threshold_workflow.ipynb](KLOT_area_threshold_workflow.ipynb) | Chicago KLOT radar area-over-threshold rainfall time series, July 2026 convective event | solid | 2026 |
+| [KLOT_QVP_case_study.ipynb](KLOT_QVP_case_study.ipynb) | Chicago KLOT quasi-vertical profile (QVP) time-height series paired with the reflectivity PPI, read from the NEXRAD ARCO Icechunk/Zarr store; 29-30 Aug 2022 convective event | solid | 2026 |
 | [KaSACR_long_range.ipynb](KaSACR_long_range.ipynb) | Long-range radar reflectivity analysis from KaSACR campaign data | solid | 2017 |
 | [Kurnell.ipynb](Kurnell.ipynb) | ODIM radar data ingest and PPI mapping for Kurnell tornado case | solid | 2015 |
 | [NIU demo.ipynb](NIU%20demo.ipynb) | Fetch and visualize Hurricane Maria radar data from AWS S3 | solid | 2018 |
