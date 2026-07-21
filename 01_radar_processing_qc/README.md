@@ -2,12 +2,13 @@
 
 Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain.
 
-**44 notebooks** &nbsp;·&nbsp; 6 featured, 37 solid, 1 work-in-progress
+**45 notebooks** &nbsp;·&nbsp; 7 featured, 37 solid, 1 work-in-progress
 
 [← Back to collection index](../README.md)
 
 ## Start here
 
+- **[advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb](advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb)** — Temporal interpolation of radar volumes by optical-flow advection morphing, on native gate geometry (C-SAPR / MC3E)
 - **[AGU_analysis.ipynb](AGU_analysis.ipynb)** — Phase processing and attenuation correction using linear programming for ARM X-band radars
 - **[Demonstration of Py-ART for the Computation Instutute .ipynb](Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb)** — Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display
 - **[LP processing of PHIDP.ipynb](LP%20processing%20of%20PHIDP.ipynb)** — Linear programming phase unwrapping for differential phase PHIDP
@@ -19,6 +20,7 @@ Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, C
 
 | Notebook | Description | Status | Last updated |
 |---|---|---|---|
+| [advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb](advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb) | Temporal interpolation of radar volumes by optical-flow advection morphing on native gate geometry; leave-one-out validated on C-SAPR / MC3E | ⭐ featured | 2026 |
 | [AGU_analysis.ipynb](AGU_analysis.ipynb) | Phase processing and attenuation correction using linear programming for ARM X-band radars | ⭐ featured | 2012 |
 | [Demonstration of Py-ART for the Computation Instutute .ipynb](Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb) | Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display | ⭐ featured | 2014 |
 | [LP processing of PHIDP.ipynb](LP%20processing%20of%20PHIDP.ipynb) | Linear programming phase unwrapping for differential phase PHIDP | ⭐ featured | 2013 |
