@@ -10,15 +10,15 @@ The collection is built primarily on the open-source atmospheric-science Python 
 
 ## At a glance
 
-- **199 notebooks** total across six directories
-- **24 featured** — substantial, documented, largely runnable, showcase-worthy
+- **200 notebooks** total across six directories
+- **25 featured** — substantial, documented, largely runnable, showcase-worthy
 - **86 solid** — working and useful, lightly documented or single-purpose
 - **89 works-in-progress** — experiments, tests, and drafts, quarantined in [`00_works_in_progress/`](00_works_in_progress/)
 - Notebooks in both the current (nbformat v4) and legacy (nbformat v3 / IPython worksheets) formats are preserved as-is
 
 ## Start here — featured notebooks
 
-The 23 most complete and instructive notebooks, grouped by topic:
+The 25 most complete and instructive notebooks, grouped by topic:
 
 ### Radar Data Processing & Quality Control
 
@@ -38,6 +38,7 @@ The 23 most complete and instructive notebooks, grouped by topic:
 - **[Tracking-Manus.ipynb](02_case_studies/Tracking-Manus.ipynb)** — Image segmentation and rainfall object tracking on ARM C-SAPR radar data using watershed algorithm
 - **[Tracking.ipynb](02_case_studies/Tracking.ipynb)** — Image segmentation and object tracking on MC3E C-SAPR radar rainfall data
 - **[sgp_goes_nexrad.ipynb](02_case_studies/sgp_goes_nexrad.ipynb)** — Fetch NEXRAD from AWS, grid with ISCCP satellite data over SGP site
+- **[CAPE_k_cloud_phase_case_study.ipynb](02_case_studies/CAPE_k_cloud_phase_case_study.ipynb)** — ARM CAPE-k cloud-phase (THERMOCLDPHASE) + AERI (TROPoe) Southern Ocean mixed-phase case at Kennaook/Cape Grim, Tasmania
 
 ### Retrievals & Microphysics
 

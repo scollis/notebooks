@@ -2,7 +2,7 @@
 
 Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI.
 
-**26 notebooks** &nbsp;·&nbsp; 6 featured, 17 solid, 3 work-in-progress
+**27 notebooks** &nbsp;·&nbsp; 7 featured, 17 solid, 3 work-in-progress
 
 [← Back to collection index](../README.md)
 
@@ -14,11 +14,13 @@ Analyses tied to a specific storm, event, location, or field campaign — hurric
 - **[Tracking-Manus.ipynb](Tracking-Manus.ipynb)** — Image segmentation and rainfall object tracking on ARM C-SAPR radar data using watershed algorithm
 - **[Tracking.ipynb](Tracking.ipynb)** — Image segmentation and object tracking on MC3E C-SAPR radar rainfall data
 - **[sgp_goes_nexrad.ipynb](sgp_goes_nexrad.ipynb)** — Fetch NEXRAD from AWS, grid with ISCCP satellite data over SGP site
+- **[CAPE_k_cloud_phase_case_study.ipynb](CAPE_k_cloud_phase_case_study.ipynb)** — ARM CAPE-k cloud-phase (THERMOCLDPHASE) + AERI optimal-estimation (TROPoe) Southern Ocean mixed-phase case at Kennaook/Cape Grim, Tasmania, with NCEP/NCAR synoptic maps; 15 Sep 2025
 
 ## All notebooks
 
 | Notebook | Description | Status | Last updated |
 |---|---|---|---|
+| [CAPE_k_cloud_phase_case_study.ipynb](CAPE_k_cloud_phase_case_study.ipynb) | ARM CAPE-k cloud-phase (THERMOCLDPHASE) + AERI optimal-estimation (TROPoe) Southern Ocean mixed-phase case at Kennaook/Cape Grim, Tasmania, with NCEP/NCAR synoptic maps; 15 Sep 2025 | ⭐ featured | 2025 |
 | [DYNAMO AIME workshop workbook.ipynb](DYNAMO%20AIME%20workshop%20workbook.ipynb) | DYNAMO field campaign radar processing and VAD wind retrieval workbook | ⭐ featured | 2013 |
 | [Image segmentation.ipynb](Image%20segmentation.ipynb) | Image segmentation analysis of MC3E C-SAPR radar rainfall fields | ⭐ featured | 2013 |
 | [Tracking for ERAD.ipynb](Tracking%20for%20ERAD.ipynb) | Image segmentation and object tracking on C-SAPR radar rain rates from MC3E campaign | ⭐ featured | 2014 |
