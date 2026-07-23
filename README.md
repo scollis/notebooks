@@ -10,15 +10,15 @@ The collection is built primarily on the open-source atmospheric-science Python 
 
 ## At a glance
 
-- **200 notebooks** total across six directories
-- **25 featured** — substantial, documented, largely runnable, showcase-worthy
+- **201 notebooks** total across six directories
+- **26 featured** — substantial, documented, largely runnable, showcase-worthy
 - **86 solid** — working and useful, lightly documented or single-purpose
 - **89 works-in-progress** — experiments, tests, and drafts, quarantined in [`00_works_in_progress/`](00_works_in_progress/)
 - Notebooks in both the current (nbformat v4) and legacy (nbformat v3 / IPython worksheets) formats are preserved as-is
 
 ## Start here — featured notebooks
 
-The 25 most complete and instructive notebooks, grouped by topic:
+The 26 most complete and instructive notebooks, grouped by topic:
 
 ### Radar Data Processing & Quality Control
 
@@ -46,6 +46,7 @@ The 25 most complete and instructive notebooks, grouped by topic:
 
 ### Models, Satellite & Gridded Data
 
+- **[04_models_satellite_gridded/EarthCARE_ARM_SGP_Overpass_Lidar.ipynb](04_models_satellite_gridded/EarthCARE_ARM_SGP_Overpass_Lidar.ipynb)** — EarthCARE ATLID overpass of ARM SGP with cal/val against ground-based lidars (Doppler, HSRL, MPL, ceilometer/CL61)
 - **[HRRR_CAPE_SREH_Chicagoland.ipynb](04_models_satellite_gridded/HRRR_CAPE_SREH_Chicagoland.ipynb)** — HRRR severe-weather analysis: CAPE, SRH, soundings over Chicagoland
 - **[HRRR_Smoke_Forecast_Animation.ipynb](04_models_satellite_gridded/HRRR_Smoke_Forecast_Animation.ipynb)** — HRRR-Smoke forecast animation with AirNow PM₂.₅ observations overlay
 - **[Herbie_Clouds_Example.ipynb](04_models_satellite_gridded/Herbie_Clouds_Example.ipynb)** — Downloads HRRR cloud/meteorology forecasts via Herbie, extracts Chicago column profiles
@@ -66,9 +67,9 @@ The 25 most complete and instructive notebooks, grouped by topic:
 |---|---:|---|
 | [`00_works_in_progress/`](00_works_in_progress/) | 71 | Experiments, tests, scratch analyses, and abandoned drafts. Kept for provenance and the occasional reusable snippet, but not polished. Expect broken cells, hard-coded paths, and half-finished ideas. |
 | [`01_radar_processing_qc/`](01_radar_processing_qc/) | 45 | Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain. |
-| [`02_case_studies/`](02_case_studies/) | 26 | Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI. |
+| [`02_case_studies/`](02_case_studies/) | 27 | Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI. |
 | [`03_retrievals_microphysics/`](03_retrievals_microphysics/) | 11 | Quantitative retrievals: T-matrix scattering, self-consistency, drop-size distributions, disdrometer analysis, rainfall/QPE estimation, and path-integrated attenuation. |
-| [`04_models_satellite_gridded/`](04_models_satellite_gridded/) | 9 | Working with HRRR, GOES, Herbie, GRIB/ZARR, reanalysis, NWP output, satellite imagery, and gridded product workflows — including the NWS API. |
+| [`04_models_satellite_gridded/`](04_models_satellite_gridded/) | 10 | Working with HRRR, GOES, Herbie, GRIB/ZARR, reanalysis, NWP output, satellite imagery, and gridded product workflows — including the NWS API. |
 | [`05_environmental_airquality_urban/`](05_environmental_airquality_urban/) | 37 | AirNow/smoke air-quality analysis, the CROCUS urban testbed, WXT weather stations, SAGE/ambient IoT sensors, lidar/ceilometers, and other non-radar in-situ sensing. |
 
 Each directory has its own `README.md` index with a full table of its notebooks, descriptions, maturity status, and dates. Self-contained project folders (e.g. `CROCUS/`, `canned_sapr_investigations/`, `tracer/`, `nexrad/`, `scipy2014/`, `UBonn/`, `urban/`, `gap_anal/`) were moved as units into their best-fit category so their internal data and relative paths remain intact.

@@ -2,12 +2,13 @@
 
 Working with HRRR, GOES, Herbie, GRIB/ZARR, reanalysis, NWP output, satellite imagery, and gridded product workflows — including the NWS API.
 
-**9 notebooks** &nbsp;·&nbsp; 5 featured, 4 solid, 0 work-in-progress
+**10 notebooks** &nbsp;·&nbsp; 6 featured, 4 solid, 0 work-in-progress
 
 [← Back to collection index](../README.md)
 
 ## Start here
 
+- **[EarthCARE_ARM_SGP_Overpass_Lidar.ipynb](EarthCARE_ARM_SGP_Overpass_Lidar.ipynb)** — EarthCARE ATLID overpasses of ARM SGP: MAAP STAC overpass search, ATLID L1B streaming, and cal/val against the SGP ground-based lidar suite
 - **[HRRR_CAPE_SREH_Chicagoland.ipynb](HRRR_CAPE_SREH_Chicagoland.ipynb)** — HRRR severe-weather analysis: CAPE, SRH, soundings over Chicagoland
 - **[HRRR_Smoke_Forecast_Animation.ipynb](HRRR_Smoke_Forecast_Animation.ipynb)** — HRRR-Smoke forecast animation with AirNow PM₂.₅ observations overlay
 - **[Herbie_Clouds_Example.ipynb](Herbie_Clouds_Example.ipynb)** — Downloads HRRR cloud/meteorology forecasts via Herbie, extracts Chicago column profiles
@@ -18,6 +19,7 @@ Working with HRRR, GOES, Herbie, GRIB/ZARR, reanalysis, NWP output, satellite im
 
 | Notebook | Description | Status | Last updated |
 |---|---|---|---|
+| [EarthCARE_ARM_SGP_Overpass_Lidar.ipynb](EarthCARE_ARM_SGP_Overpass_Lidar.ipynb) | EarthCARE ATLID overpasses of ARM SGP: MAAP STAC overpass search, ATLID L1B streaming, and cal/val against the SGP ground-based lidar suite | ⭐ featured | 2026 |
 | [HRRR_CAPE_SREH_Chicagoland.ipynb](HRRR_CAPE_SREH_Chicagoland.ipynb) | HRRR severe-weather analysis: CAPE, SRH, soundings over Chicagoland | ⭐ featured | 2026 |
 | [HRRR_Smoke_Forecast_Animation.ipynb](HRRR_Smoke_Forecast_Animation.ipynb) | HRRR-Smoke forecast animation with AirNow PM₂.₅ observations overlay | ⭐ featured | 2026 |
 | [Herbie_Clouds_Example.ipynb](Herbie_Clouds_Example.ipynb) | Downloads HRRR cloud/meteorology forecasts via Herbie, extracts Chicago column profiles | ⭐ featured | 2023 |
