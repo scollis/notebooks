@@ -10,15 +10,15 @@ The collection is built primarily on the open-source atmospheric-science Python 
 
 ## At a glance
 
-- **201 notebooks** total across six directories
-- **26 featured** — substantial, documented, largely runnable, showcase-worthy
+- **202 notebooks** total across six directories
+- **27 featured** — substantial, documented, largely runnable, showcase-worthy
 - **86 solid** — working and useful, lightly documented or single-purpose
 - **89 works-in-progress** — experiments, tests, and drafts, quarantined in [`00_works_in_progress/`](00_works_in_progress/)
 - Notebooks in both the current (nbformat v4) and legacy (nbformat v3 / IPython worksheets) formats are preserved as-is
 
 ## Start here — featured notebooks
 
-The 26 most complete and instructive notebooks, grouped by topic:
+The 27 most complete and instructive notebooks, grouped by topic:
 
 ### Radar Data Processing & Quality Control
 
@@ -39,6 +39,7 @@ The 26 most complete and instructive notebooks, grouped by topic:
 - **[Tracking.ipynb](02_case_studies/Tracking.ipynb)** — Image segmentation and object tracking on MC3E C-SAPR radar rainfall data
 - **[sgp_goes_nexrad.ipynb](02_case_studies/sgp_goes_nexrad.ipynb)** — Fetch NEXRAD from AWS, grid with ISCCP satellite data over SGP site
 - **[CAPE_k_cloud_phase_case_study.ipynb](02_case_studies/CAPE_k_cloud_phase_case_study.ipynb)** — ARM CAPE-k cloud-phase (THERMOCLDPHASE) + AERI (TROPoe) Southern Ocean mixed-phase case at Kennaook/Cape Grim, Tasmania
+- **[BNF_CSAPR2_NALMA_case_study.ipynb](02_case_studies/BNF_CSAPR2_NALMA_case_study.ipynb)** — ARM BNF C-SAPR2 dual-pol radar + NASA NALMA total lightning case study of the 1 July 2026 squall line over Bankhead National Forest
 
 ### Retrievals & Microphysics
 
@@ -67,7 +68,7 @@ The 26 most complete and instructive notebooks, grouped by topic:
 |---|---:|---|
 | [`00_works_in_progress/`](00_works_in_progress/) | 71 | Experiments, tests, scratch analyses, and abandoned drafts. Kept for provenance and the occasional reusable snippet, but not polished. Expect broken cells, hard-coded paths, and half-finished ideas. |
 | [`01_radar_processing_qc/`](01_radar_processing_qc/) | 45 | Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain. |
-| [`02_case_studies/`](02_case_studies/) | 27 | Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI. |
+| [`02_case_studies/`](02_case_studies/) | 28 | Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI. |
 | [`03_retrievals_microphysics/`](03_retrievals_microphysics/) | 11 | Quantitative retrievals: T-matrix scattering, self-consistency, drop-size distributions, disdrometer analysis, rainfall/QPE estimation, and path-integrated attenuation. |
 | [`04_models_satellite_gridded/`](04_models_satellite_gridded/) | 10 | Working with HRRR, GOES, Herbie, GRIB/ZARR, reanalysis, NWP output, satellite imagery, and gridded product workflows — including the NWS API. |
 | [`05_environmental_airquality_urban/`](05_environmental_airquality_urban/) | 37 | AirNow/smoke air-quality analysis, the CROCUS urban testbed, WXT weather stations, SAGE/ambient IoT sensors, lidar/ceilometers, and other non-radar in-situ sensing. |
