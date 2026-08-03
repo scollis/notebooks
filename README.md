@@ -10,15 +10,15 @@ The collection is built primarily on the open-source atmospheric-science Python 
 
 ## At a glance
 
-- **203 notebooks** total across six directories
-- **28 featured** — substantial, documented, largely runnable, showcase-worthy
+- **206 notebooks** total across six directories
+- **31 featured** — substantial, documented, largely runnable, showcase-worthy
 - **86 solid** — working and useful, lightly documented or single-purpose
 - **89 works-in-progress** — experiments, tests, and drafts, quarantined in [`00_works_in_progress/`](00_works_in_progress/)
 - Notebooks in both the current (nbformat v4) and legacy (nbformat v3 / IPython worksheets) formats are preserved as-is
 
 ## Start here — featured notebooks
 
-The 28 most complete and instructive notebooks, grouped by topic:
+The 31 most complete and instructive notebooks, grouped by topic:
 
 ### Radar Data Processing & Quality Control
 
@@ -32,6 +32,9 @@ The 28 most complete and instructive notebooks, grouped by topic:
 
 ### Storm & Field-Campaign Case Studies
 
+- **[02_case_studies/01_tornadic_event_27jul2026.ipynb](02_case_studies/01_tornadic_event_27jul2026.ipynb)** — HRRR mesoscale environment and KLOT NEXRAD analysis of the 27 July 2026 Chicagoland tornado outbreak, with seven NWS-surveyed damage paths
+- **[02_case_studies/02_moisture_source_and_transport.ipynb](02_case_studies/02_moisture_source_and_transport.ipynb)** — GFS vapour transport and back trajectories tracing the Chicagoland storm inflow to the Texas Gulf coast, plus soil moisture along the path
+- **[02_case_studies/03_climatological_context.ipynb](02_case_studies/03_climatological_context.ipynb)** — July 2026 Chicago climatology against 57 years of O'Hare records and a purpose-built radiosonde precipitable-water climatology
 - **[DYNAMO AIME workshop workbook.ipynb](02_case_studies/DYNAMO%20AIME%20workshop%20workbook.ipynb)** — DYNAMO field campaign radar processing and VAD wind retrieval workbook
 - **[Image segmentation.ipynb](02_case_studies/Image%20segmentation.ipynb)** — Image segmentation analysis of MC3E C-SAPR radar rainfall fields
 - **[Tracking for ERAD.ipynb](02_case_studies/Tracking%20for%20ERAD.ipynb)** — Image segmentation and object tracking on C-SAPR radar rain rates from MC3E campaign
@@ -69,7 +72,7 @@ The 28 most complete and instructive notebooks, grouped by topic:
 |---|---:|---|
 | [`00_works_in_progress/`](00_works_in_progress/) | 71 | Experiments, tests, scratch analyses, and abandoned drafts. Kept for provenance and the occasional reusable snippet, but not polished. Expect broken cells, hard-coded paths, and half-finished ideas. |
 | [`01_radar_processing_qc/`](01_radar_processing_qc/) | 45 | Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain. |
-| [`02_case_studies/`](02_case_studies/) | 29 | Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI. |
+| [`02_case_studies/`](02_case_studies/) | 32 | Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI. |
 | [`03_retrievals_microphysics/`](03_retrievals_microphysics/) | 11 | Quantitative retrievals: T-matrix scattering, self-consistency, drop-size distributions, disdrometer analysis, rainfall/QPE estimation, and path-integrated attenuation. |
 | [`04_models_satellite_gridded/`](04_models_satellite_gridded/) | 10 | Working with HRRR, GOES, Herbie, GRIB/ZARR, reanalysis, NWP output, satellite imagery, and gridded product workflows — including the NWS API. |
 | [`05_environmental_airquality_urban/`](05_environmental_airquality_urban/) | 37 | AirNow/smoke air-quality analysis, the CROCUS urban testbed, WXT weather stations, SAGE/ambient IoT sensors, lidar/ceilometers, and other non-radar in-situ sensing. |
@@ -82,19 +85,20 @@ Most-used scientific libraries across the collection:
 
 | Library | Notebooks | Role |
 |---|---:|---|
-| `pyart` | 143 | Radar I/O, gridding, dual-pol processing |
+| `pyart` | 144 | Radar I/O, gridding, dual-pol processing |
 | `xarray` | 55 | Labeled N-D arrays |
-| `cartopy` | 48 | Geographic mapping |
-| `metpy` | 27 | Meteorological calculations |
+| `cartopy` | 51 | Geographic mapping |
+| `metpy` | 29 | Meteorological calculations |
 | `netCDF4` | 79 | NetCDF file I/O |
-| `pandas` | 43 | Tabular / time-series data |
-| `scipy` | 39 | Signal processing & optimization |
+| `pandas` | 46 | Tabular / time-series data |
+| `scipy` | 42 | Signal processing & optimization |
 | `act` | 13 | ARM/atmospheric data toolkit |
 | `sage_data_client` | 19 | CROCUS / SAGE sensor data |
-| `herbie` | 5 | HRRR/NWP model retrieval |
+| `herbie` | 7 | HRRR/NWP model retrieval |
 | `xmovie` | 8 | Animated xarray fields |
 | `pytmatrix` | 7 | T-matrix scattering |
 | `nexradaws` | 8 | NEXRAD AWS access |
+| `cmweather` | 3 | Community weather-radar colormaps |
 
 ## How this was organized
 
