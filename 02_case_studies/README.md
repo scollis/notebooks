@@ -2,11 +2,17 @@
 
 Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI.
 
-**29 notebooks** &nbsp;·&nbsp; 9 featured, 17 solid, 3 work-in-progress
+**32 notebooks** &nbsp;·&nbsp; 12 featured, 17 solid, 3 work-in-progress
 
 [← Back to collection index](../README.md)
 
 ## Start here
+
+**New — the late July 2026 Chicagoland series (3 notebooks, read in order):**
+
+- **[01_tornadic_event_27jul2026.ipynb](01_tornadic_event_27jul2026.ipynb)** — Why the 27 July 2026 storms were severe and what they did: HRRR mesoscale environment, observed soundings, KLOT radar loop, and the seven NWS-surveyed damage paths
+- **[02_moisture_source_and_transport.ipynb](02_moisture_source_and_transport.ipynb)** — Where the water came from: GFS vapour transport, back trajectories to the Texas Gulf coast, and the land surface along the path
+- **[03_climatological_context.ipynb](03_climatological_context.ipynb)** — How unusual any of it was: 57 years of O'Hare July observations, a 5,025-sounding precipitable-water climatology, and the flooding in seasonal context
 
 - **[DYNAMO AIME workshop workbook.ipynb](DYNAMO%20AIME%20workshop%20workbook.ipynb)** — DYNAMO field campaign radar processing and VAD wind retrieval workbook
 - **[Image segmentation.ipynb](Image%20segmentation.ipynb)** — Image segmentation analysis of MC3E C-SAPR radar rainfall fields
@@ -22,6 +28,9 @@ Analyses tied to a specific storm, event, location, or field campaign — hurric
 
 | Notebook | Description | Status | Last updated |
 |---|---|---|---|
+| [01_tornadic_event_27jul2026.ipynb](01_tornadic_event_27jul2026.ipynb) | HRRR mesoscale environment and KLOT NEXRAD analysis of the 27 July 2026 Chicagoland tornado outbreak: extreme instability under anomalous late-July shear, seven surveyed damage paths including the looping "drunknado", and a cartopy AEQD georeferencing bug that displaces radar fields 23.6 km; 27 Jul 2026 | ⭐ featured | 2026 |
+| [02_moisture_source_and_transport.ipynb](02_moisture_source_and_transport.ipynb) | GFS integrated vapour transport and back trajectories tracing the 27 July 2026 Chicagoland inflow to the Texas Gulf coast four days upstream, plus soil moisture and Bowen-ratio partitioning along the advection path; 23-27 Jul 2026 | ⭐ featured | 2026 |
+| [03_climatological_context.ipynb](03_climatological_context.ipynb) | July 2026 Chicago climatology against 57 years of O'Hare observations and a purpose-built 5,025-sounding radiosonde precipitable-water climatology, with the flooding event in seasonal context; Jul-Aug 2026 | ⭐ featured | 2026 |
 | [BNF_CSAPR2_NALMA_case_study.ipynb](BNF_CSAPR2_NALMA_case_study.ipynb) | ARM BNF C-SAPR2 dual-pol radar + NASA NALMA total lightning case study of the 1 July 2026 squall line: hail-vs-rain polarimetry, 40 dBZ echo tops vs the -20 C level, and lightning-updraft covariation; 1 Jul 2026 | ⭐ featured | 2026 |
 | [BNF_week_survey.ipynb](BNF_week_survey.ipynb) | Seven-day ARM Bankhead National Forest site survey: datastream discovery, bulk staging, week-overview time series, and a targeted C-SAPR2 dual-pol look at the 24 July 2026 convective line; 24-30 Jul 2026 | ⭐ featured | 2026 |
 | [CAPE_k_cloud_phase_case_study.ipynb](CAPE_k_cloud_phase_case_study.ipynb) | ARM CAPE-k cloud-phase (THERMOCLDPHASE) + AERI optimal-estimation (TROPoe) Southern Ocean mixed-phase case at Kennaook/Cape Grim, Tasmania, with NCEP/NCAR synoptic maps; 15 Sep 2025 | ⭐ featured | 2025 |
