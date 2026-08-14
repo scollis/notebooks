@@ -23,8 +23,9 @@ radiometer and the surface energy balance each resolve that same break independe
 ## Precipitation was convective and patchy
 
 Weekly totals ranged from **13.09 mm at E32** to **exactly zero at E33 and E37** — facilities
-51 km apart. Any single-gauge weekly total for "SGP" would be wrong by an order of magnitude
-depending on which gauge you picked.
+**102 km apart** (each ~51 km from C1, but on nearly opposite bearings: E33 at 45.5° NE,
+E37 at 230.2° SW). Any single-gauge weekly total for "SGP" would be wrong by an order of
+magnitude depending on which gauge you picked.
 
 | Facility | Range/bearing from C1 | Weekly precip |
 |---|---|---|
