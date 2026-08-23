@@ -10,20 +10,21 @@ The collection is built primarily on the open-source atmospheric-science Python 
 
 ## At a glance
 
-- **208 notebooks** total across six directories
-- **33 featured** — substantial, documented, largely runnable, showcase-worthy
+- **209 notebooks** total across six directories
+- **34 featured** — substantial, documented, largely runnable, showcase-worthy
 - **86 solid** — working and useful, lightly documented or single-purpose
 - **89 works-in-progress** — experiments, tests, and drafts, quarantined in [`00_works_in_progress/`](00_works_in_progress/)
 - Notebooks in both the current (nbformat v4) and legacy (nbformat v3 / IPython worksheets) formats are preserved as-is
 
 ## Start here — featured notebooks
 
-The 33 most complete and instructive notebooks, grouped by topic:
+The 34 most complete and instructive notebooks, grouped by topic:
 
 ### Radar Data Processing & Quality Control
 
 - **[advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb](01_radar_processing_qc/advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb)** — Temporal interpolation of radar volumes by optical-flow advection morphing on native gate geometry (C-SAPR / MC3E)
 - **[advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb](01_radar_processing_qc/advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb)** — Advecting velocity, $Z_{DR}$ and $\rho_{HV}$ through one reflectivity-derived motion field with `radar-palette`; motion coherence and the operator's limits (ARM BNF C-SAPR2)
+- **[advection_interpolation/Spectral_FFT_Gridding_Method.ipynb](01_radar_processing_qc/advection_interpolation/Spectral_FFT_Gridding_Method.ipynb)** — The spectral (FFT) gridding operator stage by stage with `radar-palette`: sampling census, NUFFT evaluator and its adjoint check, and the no-extrapolation coverage flags (BNF C-SAPR2)
 - [Spectral_FFT_Gridding_Performance.ipynb](01_radar_processing_qc/advection_interpolation/Spectral_FFT_Gridding_Performance.ipynb) — spectral vs Barnes gridding cost across a resolution ramp on two domains
 - **[AGU_analysis.ipynb](01_radar_processing_qc/AGU_analysis.ipynb)** — Phase processing and attenuation correction using linear programming for ARM X-band radars
 - **[Demonstration of Py-ART for the Computation Instutute .ipynb](01_radar_processing_qc/Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb)** — Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display

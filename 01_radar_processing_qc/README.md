@@ -2,7 +2,7 @@
 
 Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain.
 
-**47 notebooks** &nbsp;·&nbsp; 9 featured, 37 solid, 1 work-in-progress
+**48 notebooks** &nbsp;·&nbsp; 10 featured, 37 solid, 1 work-in-progress
 
 [← Back to collection index](../README.md)
 
@@ -11,6 +11,7 @@ Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, C
 - **[advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb](advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb)** — Temporal interpolation of radar volumes by optical-flow advection morphing, on native gate geometry (C-SAPR / MC3E)
 - **[advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb](advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb)** — Advecting every polarimetric variable through one reflectivity-derived motion field with `radar-palette`; motion coherence and where the operator breaks (BNF C-SAPR2)
 | [Spectral_FFT_Gridding_Performance.ipynb](advection_interpolation/Spectral_FFT_Gridding_Performance.ipynb) | Benchmarks spectral (FFT) gridding against Barnes across a resolution ramp on two domains; spectral cost is set by the input volume, not the output lattice | ⭐ featured | 2026 |
+| [Spectral_FFT_Gridding_Method.ipynb](advection_interpolation/Spectral_FFT_Gridding_Method.ipynb) | The spectral (FFT) gridding operator stage by stage: sampling census, the NUFFT evaluator and its adjoint check, cone geometry, and the no-extrapolation policy behind the coverage flags | ⭐ featured | 2026 |
 - **[AGU_analysis.ipynb](AGU_analysis.ipynb)** — Phase processing and attenuation correction using linear programming for ARM X-band radars
 - **[Demonstration of Py-ART for the Computation Instutute .ipynb](Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb)** — Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display
 - **[LP processing of PHIDP.ipynb](LP%20processing%20of%20PHIDP.ipynb)** — Linear programming phase unwrapping for differential phase PHIDP
@@ -24,6 +25,8 @@ Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, C
 |---|---|---|---|
 | [advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb](advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb) | One motion field estimated from reflectivity, applied to velocity, $Z_{DR}$ and $\rho_{HV}$ via `radar-palette`'s `carry_fields`; quantifies motion coherence, fold risk and core attenuation on ARM BNF C-SAPR2 | ⭐ featured | 2026 |
 | [advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb](advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb) | Temporal interpolation of radar volumes by optical-flow advection morphing on native gate geometry; leave-one-out validated on C-SAPR / MC3E | ⭐ featured | 2026 |
+| [advection_interpolation/Spectral_FFT_Gridding_Method.ipynb](advection_interpolation/Spectral_FFT_Gridding_Method.ipynb) | Stage-by-stage walkthrough of `radar-palette`'s spectral (FFT) gridding: `census_sweep` classification, `SweepSpectralEvaluator` with its machine-zero adjoint test, `build_cones`, and the `VerticalFlag` coverage invariant | ⭐ featured | 2026 |
+| [advection_interpolation/Spectral_FFT_Gridding_Performance.ipynb](advection_interpolation/Spectral_FFT_Gridding_Performance.ipynb) | Benchmarks `radar-palette`'s spectral (FFT) gridding against Barnes objective analysis across a 2000-250 m resolution ramp on two domains; locates the crossover | ⭐ featured | 2026 |
 | [AGU_analysis.ipynb](AGU_analysis.ipynb) | Phase processing and attenuation correction using linear programming for ARM X-band radars | ⭐ featured | 2012 |
 | [Demonstration of Py-ART for the Computation Instutute .ipynb](Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb) | Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display | ⭐ featured | 2014 |
 | [LP processing of PHIDP.ipynb](LP%20processing%20of%20PHIDP.ipynb) | Linear programming phase unwrapping for differential phase PHIDP | ⭐ featured | 2013 |
