@@ -2,7 +2,7 @@
 
 Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain.
 
-**46 notebooks** &nbsp;·&nbsp; 8 featured, 37 solid, 1 work-in-progress
+**47 notebooks** &nbsp;·&nbsp; 9 featured, 37 solid, 1 work-in-progress
 
 [← Back to collection index](../README.md)
 
@@ -10,6 +10,7 @@ Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, C
 
 - **[advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb](advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb)** — Temporal interpolation of radar volumes by optical-flow advection morphing, on native gate geometry (C-SAPR / MC3E)
 - **[advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb](advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb)** — Advecting every polarimetric variable through one reflectivity-derived motion field with `radar-palette`; motion coherence and where the operator breaks (BNF C-SAPR2)
+| [Spectral_FFT_Gridding_Performance.ipynb](advection_interpolation/Spectral_FFT_Gridding_Performance.ipynb) | Benchmarks spectral (FFT) gridding against Barnes across a resolution ramp on two domains; spectral cost is set by the input volume, not the output lattice | ⭐ featured | 2026 |
 - **[AGU_analysis.ipynb](AGU_analysis.ipynb)** — Phase processing and attenuation correction using linear programming for ARM X-band radars
 - **[Demonstration of Py-ART for the Computation Instutute .ipynb](Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb)** — Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display
 - **[LP processing of PHIDP.ipynb](LP%20processing%20of%20PHIDP.ipynb)** — Linear programming phase unwrapping for differential phase PHIDP
