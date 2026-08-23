@@ -1,0 +1,22 @@
+quantity,value,units,description
+scan_start_utc,2026-08-07 17:15:45,,Volume start time read from file
+scan_end_utc,2026-08-07 17:21:44,,Volume end time (21 sweeps)
+sweep0_elevation,0.48,deg,Lowest sweep fixed angle
+kvnx_lat,36.74062,deg N,Radar latitude from file
+kvnx_lon,-98.12772,deg E,Radar longitude from file
+kvnx_alt,383.0,m MSL,Radar altitude
+range_kvnx_to_c1,58.95,km,Great-circle distance KVNX to SGP C1
+nearest_gate_offset,0.195,km,Distance from C1 to centre of nearest gate
+beam_height_at_c1,1104.5,m MSL,0.48 deg beam centre height over C1 (4/3 earth)
+dbz_at_c1,50.0,dBZ,Reflectivity in gate nearest C1
+zdr_at_c1,1.438,dB,Differential reflectivity at C1
+rhohv_at_c1,0.975,-,Copolar correlation coefficient at C1
+dbz_c1_2km_footprint,52.32,dBZ,Linear-Z mean over 101 gates within 2 km of C1
+rainrate_mp_at_c1_gate,48.62,mm/hr,"Marshall-Palmer Z=200R^1.6, nearest gate"
+rainrate_mp_c1_footprint,67.87,mm/hr,"Marshall-Palmer, 2 km footprint mean"
+disdrometer_peak_rainrate,57.33,mm/hr,"ARM laser disdrometer C1 peak, 17:18 UTC (reference)"
+max_dbz_sweep0,64.5,dBZ,"Domain max, lowest sweep"
+max_dbz_volume,67.0,dBZ,"Domain max, all 21 sweeps"
+max_dbz_sweep0_lat,35.754,deg N,Location of lowest-sweep max
+max_dbz_sweep0_lon,-97.75,deg E,Location of lowest-sweep max
+gatefilter_kept_fraction,0.1796,-,Fraction of valid volume gates surviving rhohv>=0.85 & Z>=5
