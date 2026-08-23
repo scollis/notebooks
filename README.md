@@ -10,19 +10,20 @@ The collection is built primarily on the open-source atmospheric-science Python 
 
 ## At a glance
 
-- **206 notebooks** total across six directories
-- **31 featured** — substantial, documented, largely runnable, showcase-worthy
+- **207 notebooks** total across six directories
+- **32 featured** — substantial, documented, largely runnable, showcase-worthy
 - **86 solid** — working and useful, lightly documented or single-purpose
 - **89 works-in-progress** — experiments, tests, and drafts, quarantined in [`00_works_in_progress/`](00_works_in_progress/)
 - Notebooks in both the current (nbformat v4) and legacy (nbformat v3 / IPython worksheets) formats are preserved as-is
 
 ## Start here — featured notebooks
 
-The 31 most complete and instructive notebooks, grouped by topic:
+The 32 most complete and instructive notebooks, grouped by topic:
 
 ### Radar Data Processing & Quality Control
 
 - **[advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb](01_radar_processing_qc/advection_interpolation/Radar_Volume_Advection_Interpolation.ipynb)** — Temporal interpolation of radar volumes by optical-flow advection morphing on native gate geometry (C-SAPR / MC3E)
+- **[advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb](01_radar_processing_qc/advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb)** — Advecting velocity, $Z_{DR}$ and $\rho_{HV}$ through one reflectivity-derived motion field with `radar-palette`; motion coherence and the operator's limits (ARM BNF C-SAPR2)
 - **[AGU_analysis.ipynb](01_radar_processing_qc/AGU_analysis.ipynb)** — Phase processing and attenuation correction using linear programming for ARM X-band radars
 - **[Demonstration of Py-ART for the Computation Instutute .ipynb](01_radar_processing_qc/Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb)** — Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display
 - **[LP processing of PHIDP.ipynb](01_radar_processing_qc/LP%20processing%20of%20PHIDP.ipynb)** — Linear programming phase unwrapping for differential phase PHIDP
