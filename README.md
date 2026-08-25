@@ -10,15 +10,15 @@ The collection is built primarily on the open-source atmospheric-science Python 
 
 ## At a glance
 
-- **209 notebooks** total across six directories
-- **34 featured** — substantial, documented, largely runnable, showcase-worthy
+- **210 notebooks** total across the six numbered directories (plus one in [`arm_sgp_week_survey_aug2026/`](arm_sgp_week_survey_aug2026/), which is not indexed below)
+- **35 featured** — substantial, documented, largely runnable, showcase-worthy
 - **86 solid** — working and useful, lightly documented or single-purpose
 - **89 works-in-progress** — experiments, tests, and drafts, quarantined in [`00_works_in_progress/`](00_works_in_progress/)
 - Notebooks in both the current (nbformat v4) and legacy (nbformat v3 / IPython worksheets) formats are preserved as-is
 
 ## Start here — featured notebooks
 
-The 34 most complete and instructive notebooks, grouped by topic:
+The 35 most complete and instructive notebooks, grouped by topic:
 
 ### Radar Data Processing & Quality Control
 
@@ -26,6 +26,7 @@ The 34 most complete and instructive notebooks, grouped by topic:
 - **[advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb](01_radar_processing_qc/advection_interpolation/Advecting_Polarimetric_Variables_carry_fields.ipynb)** — Advecting velocity, $Z_{DR}$ and $\rho_{HV}$ through one reflectivity-derived motion field with `radar-palette`; motion coherence and the operator's limits (ARM BNF C-SAPR2)
 - **[advection_interpolation/Spectral_FFT_Gridding_Method.ipynb](01_radar_processing_qc/advection_interpolation/Spectral_FFT_Gridding_Method.ipynb)** — The spectral (FFT) gridding operator stage by stage with `radar-palette`: sampling census, NUFFT evaluator and its adjoint check, and the no-extrapolation coverage flags (BNF C-SAPR2)
 - [Spectral_FFT_Gridding_Performance.ipynb](01_radar_processing_qc/advection_interpolation/Spectral_FFT_Gridding_Performance.ipynb) — spectral vs Barnes gridding cost across a resolution ramp on two domains
+- **[BNF_CSAPR2_absolute_calibration.ipynb](01_radar_processing_qc/BNF_CSAPR2_absolute_calibration.ipynb)** — Absolute $Z$ and $Z_{DR}$ calibration of ARM BNF C-SAPR2 against four independent references — clutter RCA, LDQUANTS disdrometers, KHTX NEXRAD S-band, and GPM DPR Ku volume matching — held to one acceptance test throughout
 - **[AGU_analysis.ipynb](01_radar_processing_qc/AGU_analysis.ipynb)** — Phase processing and attenuation correction using linear programming for ARM X-band radars
 - **[Demonstration of Py-ART for the Computation Instutute .ipynb](01_radar_processing_qc/Demonstration%20of%20Py-ART%20for%20the%20Computation%20Instutute%20.ipynb)** — Py-ART tutorial: radar I/O, dual-pol fields, smoothing, map display
 - **[LP processing of PHIDP.ipynb](01_radar_processing_qc/LP%20processing%20of%20PHIDP.ipynb)** — Linear programming phase unwrapping for differential phase PHIDP
@@ -74,7 +75,7 @@ The 34 most complete and instructive notebooks, grouped by topic:
 | Directory | Notebooks | Focus |
 |---|---:|---|
 | [`00_works_in_progress/`](00_works_in_progress/) | 71 | Experiments, tests, scratch analyses, and abandoned drafts. Kept for provenance and the occasional reusable snippet, but not polished. Expect broken cells, hard-coded paths, and half-finished ideas. |
-| [`01_radar_processing_qc/`](01_radar_processing_qc/) | 45 | Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain. |
+| [`01_radar_processing_qc/`](01_radar_processing_qc/) | 49 | Dealiasing, differential-phase (PHIDP/KDP) processing, attenuation correction, CMAC, gridding, gate filtering, dual-pol corrections, and radar I/O — the core Py-ART processing chain. |
 | [`02_case_studies/`](02_case_studies/) | 32 | Analyses tied to a specific storm, event, location, or field campaign — hurricanes, tornadoes, hail, and campaigns such as TWP-ICE, DYNAMO, MC3E, and CACTI. |
 | [`03_retrievals_microphysics/`](03_retrievals_microphysics/) | 11 | Quantitative retrievals: T-matrix scattering, self-consistency, drop-size distributions, disdrometer analysis, rainfall/QPE estimation, and path-integrated attenuation. |
 | [`04_models_satellite_gridded/`](04_models_satellite_gridded/) | 10 | Working with HRRR, GOES, Herbie, GRIB/ZARR, reanalysis, NWP output, satellite imagery, and gridded product workflows — including the NWS API. |
@@ -95,13 +96,23 @@ Most-used scientific libraries across the collection:
 | `netCDF4` | 79 | NetCDF file I/O |
 | `pandas` | 46 | Tabular / time-series data |
 | `scipy` | 42 | Signal processing & optimization |
-| `act` | 13 | ARM/atmospheric data toolkit |
+| `act` | 14 | ARM/atmospheric data toolkit |
 | `sage_data_client` | 19 | CROCUS / SAGE sensor data |
 | `herbie` | 7 | HRRR/NWP model retrieval |
 | `xmovie` | 8 | Animated xarray fields |
 | `pytmatrix` | 7 | T-matrix scattering |
 | `nexradaws` | 8 | NEXRAD AWS access |
-| `cmweather` | 3 | Community weather-radar colormaps |
+| `cmweather` | 9 | Community weather-radar colormaps |
+| `gpm-api` | 1 | GPM DPR access and spaceborne/ground volume matching |
+| `xradar` | 2 | cfradial data model, bridged from Py-ART |
+
+> **Mixed provenance in the four rows above.** `act`, `cmweather`, `gpm-api` and
+> `xradar` were recounted directly (an `import`/`from` scan of every notebook's
+> code cells); the other rows are the original figures. The two methods disagree
+> — a direct scan finds 83 notebooks importing `pyart`, not 144 — most likely
+> because legacy nbformat v3 notebooks store code under a different key than the
+> scan reads. Treat the unrecounted rows as approximate lower-bound-of-unknown
+> until the whole table is regenerated by one method.
 
 ## How this was organized
 
